@@ -14,12 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import include, path
-from config.views import main_home
+from django.urls import path
+from config.views import generate_image_to_text
+
+# create namapspace
+app_name = 'images'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', main_home, name='home'),
-    path('', include('images.urls', namespace='images')),
+    path('generate-image', generate_image_to_text, name='home'),
 ]
