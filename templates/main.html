@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h3>Write an instruction to generate image</h3>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" class="form-control" name="user_input" placeholder="Enter a prompt"><br><br>
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+
+{% if response_chatbot %}
+    <h3>Translation</h3>
+    <p>{{ response_chatbot|safe }}</p>
+{% endif %}
+
+{% endblock content %}
