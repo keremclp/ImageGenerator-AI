@@ -12,7 +12,11 @@
   <button type="submit" class="btn btn-primary mt-3">Submit</button>
 </form>
 
-{% if response_chatbot %}
-<h3>Translation</h3>
-<p>{{ response_chatbot|safe }}</p>
-{% endif %} {% endblock content %}
+{% if object %}
+<div>
+  {{ object.phrase }}
+  <br />
+  <img src="{{ object.ai_image.url }}" alt="{{ object.phrase }}" />
+</div>
+{% endif %} 
+{% endblock content %}
