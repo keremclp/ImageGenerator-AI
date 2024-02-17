@@ -43,4 +43,4 @@ def generate_image_to_text(request):
 
 
 def main_home(request):
-    return render(request, 'base.html')
+    return render(request, 'home.html')

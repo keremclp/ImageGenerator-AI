@@ -21,5 +21,5 @@ from config.views import generate_image_to_text
 app_name = 'images'
 
 urlpatterns = [
-    path('generate-image', generate_image_to_text, name='home'),
+    path('generate-image', generate_image_to_text, name='generate'),
 ]
